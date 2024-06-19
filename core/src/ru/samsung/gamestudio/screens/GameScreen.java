@@ -74,6 +74,7 @@ public class GameScreen extends ScreenAdapter {
     int frameCounter;
     int frameMultiplier = 10;
     AnimatedSprite amogus;
+    AnimatedSprite rickroll;
 
     Random random;
 
@@ -106,6 +107,7 @@ public class GameScreen extends ScreenAdapter {
         shieldView = new ShieldView(566, 45);
         shield = new Texture(GameResources.SHIELD_PATH);
         amogus = new AnimatedSprite(GameResources.AMOGUS, 15);
+        rickroll = new AnimatedSprite(GameResources.RICK_ROLL, 30);
 
         shipObject = new ShipObject(
                 GameSettings.SCREEN_WIDTH / 2, 150,
@@ -389,6 +391,9 @@ public class GameScreen extends ScreenAdapter {
             pauseTextView.draw(myGdxGame.batch);
             homeButton.draw(myGdxGame.batch);
             continueButton.draw(myGdxGame.batch);
+            rickroll.update(Gdx.graphics.getDeltaTime());
+            rickroll.setPosition(110, 100);
+            rickroll.draw(myGdxGame.batch);
         } else if (gameSession.state == GameState.ENDED) {
             fullBlackoutView.draw(myGdxGame.batch);
             recordsTextView.draw(myGdxGame.batch);

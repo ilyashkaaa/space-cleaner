@@ -5,6 +5,8 @@ import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.ScreenUtils;
+
+import ru.samsung.gamestudio.AnimatedSprite;
 import ru.samsung.gamestudio.GameResources;
 import ru.samsung.gamestudio.managers.MemoryManager;
 import ru.samsung.gamestudio.MyGdxGame;
@@ -27,30 +29,31 @@ public class SettingsScreen extends ScreenAdapter {
     TextView soundSettingView;
     TextView clearSettingView;
     TextView gyroscopeSettingView;
+    AnimatedSprite blackHole;
 
     public SettingsScreen(MyGdxGame myGdxGame) {
         this.myGdxGame = myGdxGame;
-
-        backgroundView = new MovingBackgroundView(GameResources.BACKGROUND_IMG_PATH);
-        titleTextView = new TextView(myGdxGame.largeWhiteFont, 256, 956, "Settings");
-        blackoutImageView = new ImageView(85, 365, GameResources.BLACKOUT_MIDDLE_IMG_PATH);
-        clearSettingView = new TextView(myGdxGame.commonWhiteFont, 173, 649, "Clear records");
+        backgroundView = new MovingBackgroundView(GameResources.BACKGROUND_BLACK_IMG_PATH);
+        titleTextView = new TextView(myGdxGame.largeWhiteFont, 256, 1156, "Settings");
+        blackoutImageView = new ImageView(85, 605, GameResources.BLACKOUT_MIDDLE_IMG_PATH);
+        clearSettingView = new TextView(myGdxGame.commonWhiteFont, 173, 849, "Clear records");
+        blackHole = new AnimatedSprite(GameResources.BLACK_HOLE_TEXTURES, 30);
 
 
         musicSettingView = new TextView(
                 myGdxGame.commonWhiteFont,
-                173, 767,
+                173, 967,
                 "Music: " + translateStateToText(MemoryManager.loadIsMusicOn())
         );
 
         soundSettingView = new TextView(
                 myGdxGame.commonWhiteFont,
-                173, 708,
+                173, 908,
                 "Sound: " + translateStateToText(MemoryManager.loadIsSoundOn())
         );
 
         returnButton = new ButtonView(
-                280, 447,
+                280, 647,
                 160, 70,
                 myGdxGame.commonBlackFont,
                 GameResources.BUTTON_SHORT_BG_IMG_PATH,
@@ -58,7 +61,7 @@ public class SettingsScreen extends ScreenAdapter {
         );
         gyroscopeSettingView = new TextView(
                 myGdxGame.commonWhiteFont,
-                173, 590,
+                173, 790,
                 "Gyroscope: " + translateStateToText(MemoryManager.loadIsGyroscopeOn())
         );
 
@@ -84,6 +87,9 @@ public class SettingsScreen extends ScreenAdapter {
         soundSettingView.draw(myGdxGame.batch);
         clearSettingView.draw(myGdxGame.batch);
         gyroscopeSettingView.draw(myGdxGame.batch);
+        blackHole.update(delta);
+        blackHole.setPosition(-25, 50);
+        blackHole.draw(myGdxGame.batch);
 
         myGdxGame.batch.end();
     }

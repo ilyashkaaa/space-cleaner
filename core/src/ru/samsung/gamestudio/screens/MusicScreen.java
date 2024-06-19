@@ -46,7 +46,7 @@ public class MusicScreen extends ScreenAdapter {
         maxwellTheCat = new Texture(GameResources.MAXWELL_THE_CAT);
         pianoCat = new AnimatedSprite(GameResources.PIANO_CAT, 10);
 
-        basicText = new TextView(myGdxGame.plushLargeWhiteFont, 200, 1070, "Basic music(");
+        basicText = new TextView(myGdxGame.plushLargeWhiteFont, 200, 1070, "Interstellar");
         nyanCatText = new TextView(myGdxGame.plushLargeWhiteFont, 260, 913, "Nyan Cat");
         widePutinText = new TextView(myGdxGame.plushLargeWhiteFont, 240, 756, "Wide Putin");
         amogusText = new TextView(myGdxGame.plushLargeWhiteFont, 290, 599, "Amogus");
@@ -172,9 +172,9 @@ public class MusicScreen extends ScreenAdapter {
             }
             if (music1.isHit(myGdxGame.touch.x, myGdxGame.touch.y)) {
                 AudioManager.backgroundMusic.stop();
-                GameResources.BACKGROUND_MUSIC_PATH = "sounds/background_music.mp3";
-                AudioManager.backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("sounds/background_music.mp3"));
-                AudioManager.backgroundMusic.setVolume(0.2f);
+                GameResources.BACKGROUND_MUSIC_PATH = "sounds/interstellar.mp3";
+                AudioManager.backgroundMusic = Gdx.audio.newMusic(Gdx.files.internal("sounds/interstellar.mp3"));
+                AudioManager.backgroundMusic.setVolume(0.4f);
                 AudioManager.backgroundMusic.setLooping(true);
                 AudioManager.backgroundMusic.play();
             }
@@ -183,7 +183,7 @@ public class MusicScreen extends ScreenAdapter {
 
     private void frameDraw(SpriteBatch batch) {
         switch (GameResources.BACKGROUND_MUSIC_PATH) {
-            case "sounds/background_music.mp3":
+            case "sounds/interstellar.mp3":
                 batch.draw(frameTexture, 37, 1025);
                 break;
             case "sounds/nyan_cat.mp3":
