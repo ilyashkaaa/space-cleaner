@@ -97,11 +97,10 @@ public class GameScreen extends ScreenAdapter {
         bossArray = new ArrayList<>();
         enemyBulletArray = new ArrayList<>();
         framesArray = new String[]{
-                "textures/ship1.png",
-                "textures/ship2.png",
-                "textures/ship3.png",
-                "textures/ship4.png",
-                "textures/ship5.png",
+                "textures/ships/ship1/0.png",
+                "textures/ships/ship1/1.png",
+                "textures/ships/ship1/2.png",
+                "textures/ships/ship1/3.png"
         };
         frameCounter = 0;
         shieldView = new ShieldView(566, 45);

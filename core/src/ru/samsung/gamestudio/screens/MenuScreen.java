@@ -24,7 +24,6 @@ public class MenuScreen extends ScreenAdapter {
     MovingBackgroundView backgroundView;
     TextView titleView;
     ButtonView startButtonView;
-    ButtonView weaponButtonView;
     ButtonView settingsButtonView;
     ButtonView exitButtonView;
     AnimatedSprite catGif;
@@ -45,7 +44,6 @@ public class MenuScreen extends ScreenAdapter {
 
         titleView = new TextView(myGdxGame.plushLargeWhiteFont, 120, 800, "Space Cleaner");
         startButtonView = new ButtonView(140, 646, 440, 70, myGdxGame.commonBlackFont, GameResources.BUTTON_LONG_BG_IMG_PATH, "Start");
-//        weaponButtonView = new ButtonView(140, 551, 440, 70, myGdxGame.commonBlackFont, GameResources.BUTTON_LONG_BG_IMG_PATH, "Weapon");
         settingsButtonView = new ButtonView(140, 551, 440, 70, myGdxGame.commonBlackFont, GameResources.BUTTON_LONG_BG_IMG_PATH, "Settings");
         exitButtonView = new ButtonView(140, 456, 440, 70, myGdxGame.commonBlackFont, GameResources.BUTTON_LONG_BG_IMG_PATH, "Exit");
     }

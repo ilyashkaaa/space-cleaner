@@ -33,7 +33,6 @@ public class WeaponScreen extends ScreenAdapter {
     ChooseButtonView toxicGunButton;
     ChooseButtonView iceGunButton;
     ChooseButtonView energyGunButton;
-    ChooseButtonView bitcoinGunButton;
     ButtonView returnButton;
     ButtonView nextButton;
 

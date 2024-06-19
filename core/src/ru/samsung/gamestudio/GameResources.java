@@ -39,7 +39,7 @@ public class GameResources {
     public static String MEDIUM_IMG_PATH = "textures/mediumImage.png";
     public static String HARD_IMG_PATH = "textures/hardImage.png";
     public static String ENEMY_BULLET_IMG_PATH = "textures/bullets/bossBullet.png";
-    public static final String SHIP_IMG_PATH = "textures/ship1.png";
+    public static final String SHIP_IMG_PATH = "textures/ships/ship1/0.png";
     public static final String TRASH_IMG_PATH = "textures/trash.png";
     public static final String METEOR_IMG_PATH = "textures/meteor.png";
     public static final String UFO_IMG_PATH = "textures/ufo.png";
@@ -170,12 +170,6 @@ public class GameResources {
             new Texture("textures/gifs/cat_play_gif/46.png"),
             new Texture("textures/gifs/cat_play_gif/47.png"),
             new Texture("textures/gifs/cat_play_gif/48.png")
-    };
-    public static final Texture[] CAT_FIRE_TEXTURES = new Texture[]{
-            new Texture("textures/gifs/cat_fire_gif/1.png"),
-            new Texture("textures/gifs/cat_fire_gif/2.png"),
-            new Texture("textures/gifs/cat_fire_gif/3.png"),
-            new Texture("textures/gifs/cat_fire_gif/4.png")
     };
     public static final Texture[] BLACK_HOLE_TEXTURES = new Texture[]{
             new Texture("textures/gifs/black_hole_gif/Black_hole_representation01.png"),
